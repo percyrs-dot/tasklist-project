@@ -1,0 +1,11 @@
+.tasklist-container {
+    margin: 1rem;
+}
+
+ol {
+    list-style: none;
+}
+
+li {
+    margin-top: 2rem;
+}
