@@ -9,13 +9,19 @@
     background-color: #0ab6ab;
   }
 
-/* .header-left,
-.header-center,
-.header-right {
-  flex: 1;
-} */
-
 h1 {
     font-family: sans-serif;
     font-size: 1rem;
+}
+
+button {
+  all: unset;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 20%;
+}
+
+
+button:hover {
+  background-color: #39bdb4;
 }
