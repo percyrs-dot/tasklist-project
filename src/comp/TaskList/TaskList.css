@@ -1,5 +1,5 @@
 .tasklist-container {
-    margin: 1rem;
+    display: flex;
 }
 
 ol {
@@ -8,4 +8,5 @@ ol {
 
 li {
     margin-top: 2rem;
+    color: white;
 }
