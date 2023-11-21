@@ -4,13 +4,11 @@ import TaskList from './comp/TaskList/TaskList'
 
 function App() {
 
-
   return (
     <>
       <div className='app-container'>
         <Header />
         <TaskList />
-        {/* <TaskForm /> */}
       </div>
     </>
   )
