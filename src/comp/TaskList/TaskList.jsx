@@ -1,7 +1,9 @@
 import AddButton from "../AddButton/AddButton";
+import TaskItem from "../TaskItem/TaskItem";
 import "./TaskList.css";
 import { useState, useEffect } from "react";
-export default function TaskList({ onAddTask }) {
+
+export default function TaskList() {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (taskText) => {
@@ -34,15 +36,16 @@ export default function TaskList({ onAddTask }) {
       <div className="tasklist-container">
         <ol>
           {tasks.map((task) => (
-            <li key={task.id}>
-              <input
-                type="checkbox"
-                checked={task.status}
-                onChange={() => toggleTaskStatus(task.id)}
-              />
-              {task.content} - {task.status ? "Completed" : "Pending"}
-              <button onClick={() => removeTask(task.id)}>X</button>
-            </li>
+              <TaskItem
+              key={task.id}
+              task={{
+                id: task.id,
+                content: task.content,
+                status: task.status
+              }}
+              toggleTaskStatus={toggleTaskStatus}
+              removeTask={removeTask}
+            />
           ))}
         </ol>
       </div>
